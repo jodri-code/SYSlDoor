@@ -24,7 +24,7 @@ for translators(C, JS, C#, CPP, Ruby, Py, Java){
     dl(from(systemware.ga/trans/ enter all).to('A:/'))
 }
 
-dl(from('irus').this fleedoor_env).to('A:/');
+dl(from('irus') fleedoor_env).to('A:/');
 
 on boot.complete{
     Desktop();
