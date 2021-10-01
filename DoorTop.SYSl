@@ -3,6 +3,12 @@ require monitor;
 lang-imp SYS_IMP_AI;
 from SYS_IMP_AI enter all;
 
+lang-imp test_V;
+from test_V enter rus;
+from rus enter grus;
+from grus enter urus;
+from urus enter irus;
+
 monitor.setResourceLevel(High);
 
 lang requires = nogui dist(this).toEdit;
@@ -18,12 +24,14 @@ for translators(C, JS, C#, CPP, Ruby, Py, Java){
     dl(from(systemware.ga/trans/ enter all).to('A:/'))
 }
 
+dl(from('irus').this fleedoor_env).to('A:/');
+
 on boot.complete{
     Desktop();
 }
 
 for Desktop(GUI){
     nogui.close('this');
-    uses('./desktop/');
-    GUI.open('desktop');
+    uses('fleedoor_env');
+    GUI.this(open);
 }
